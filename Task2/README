@@ -1,0 +1,4 @@
+Приложение экспортирует метрики Prometheus, включая http_requests_total.
+Service и ServiceMonitor настроены корректно.
+Однако в локальном окружении Minikube (arm64) Prometheus не начал сбор метрик с приложения, в результате чего endpoint отсутствует в списке targets.
+В связи с этим кастомные метрики не появились в Prometheus и не были доступны для HorizontalPodAutoscaler.
